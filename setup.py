@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "Kidney-Disease-Classification-MLflow-DVC"
+REPO_NAME = "kidney-Disease-Classification-MLflow-DVC"
 AUTHOR_USER_NAME = "ShaikhTaiba"
 SRC_REPO = "cnnClassifier"
 AUTHOR_EMAIL = "taibashaikh025@gmail.com"
@@ -15,7 +15,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small python package for CNN app",
+    description="A small package for kidney disease classification",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",

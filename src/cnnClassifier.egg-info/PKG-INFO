@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: cnnClassifier
 Version: 0.0.0
-Summary: A small python package for CNN app
-Home-page: https://github.com/ShaikhTaiba/Kidney-Disease-Classification-MLflow-DVC
+Summary: A small package for kidney disease classification
+Home-page: https://github.com/ShaikhTaiba/kidney-Disease-Classification-MLflow-DVC
 Author: ShaikhTaiba
 Author-email: taibashaikh025@gmail.com
-Project-URL: Bug Tracker, https://github.com/ShaikhTaiba/Kidney-Disease-Classification-MLflow-DVC/issues
+Project-URL: Bug Tracker, https://github.com/ShaikhTaiba/kidney-Disease-Classification-MLflow-DVC/issues
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
