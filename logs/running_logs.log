@@ -1,0 +1,5 @@
+[2024-08-01 22:28:42,558: INFO: main: Welcome to our custom log]
+[2024-08-01 22:30:14,635: INFO: main: Welcome to our custom log]
+[2024-08-01 22:43:02,575: INFO: __init__: This is a test log message.]
+[2024-08-01 22:43:02,575: INFO: main: Welcome to our custom log]
+[2024-08-01 22:43:24,822: INFO: main: Welcome to our custom log]
