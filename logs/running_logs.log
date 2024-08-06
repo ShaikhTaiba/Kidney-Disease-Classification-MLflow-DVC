@@ -3,3 +3,82 @@
 [2024-08-01 22:43:02,575: INFO: __init__: This is a test log message.]
 [2024-08-01 22:43:02,575: INFO: main: Welcome to our custom log]
 [2024-08-01 22:43:24,822: INFO: main: Welcome to our custom log]
+[2024-08-06 20:38:42,759: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:39:23,509: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:39:23,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:39:23,523: INFO: common: created directory at: artifacts]
+[2024-08-06 20:44:56,640: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:44:56,648: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:44:56,650: INFO: common: created directory at: artifacts]
+[2024-08-06 20:46:46,197: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:46:46,202: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:46:46,204: INFO: common: created directory at: artifacts]
+[2024-08-06 20:47:09,846: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:47:09,851: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:47:09,853: INFO: common: created directory at: artifacts]
+[2024-08-06 20:47:10,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:47:10,873: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:47:10,874: INFO: common: created directory at: artifacts]
+[2024-08-06 20:48:15,455: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 20:48:15,459: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 20:48:15,461: INFO: common: created directory at: artifacts]
+[2024-08-06 20:48:15,462: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-06 20:48:15,464: INFO: 986331348: Downloading data from https://drive.google.com/file/d/152krLDg50UKntRI8CQ77sta9o_F8UnBq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-06 20:53:54,092: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/152krLDg50UKntRI8CQ77sta9o_F8UnBq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-06 23:54:38,341: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-06 23:54:38,357: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 23:54:38,357: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 23:54:38,357: INFO: common: created directory at: artifacts]
+[2024-08-06 23:54:38,372: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-06 23:54:38,372: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/152krLDg50UKntRI8CQ77sta9o_F8UnBq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-06 23:56:40,255: ERROR: main: ('Connection broken: IncompleteRead(501705019 bytes read, 1124524000 more expected)', IncompleteRead(501705019 bytes read, 1124524000 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 748, in _error_catcher
+    yield
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 894, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(501705019 bytes read, 1124524000 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 977, in read
+    data = self._raw_read(amt)
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 902, in _raw_read
+    self._fp.close()
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 772, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(501705019 bytes read, 1124524000 more expected)', IncompleteRead(501705019 bytes read, 1124524000 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    data_ingestion.main()
+  File "d:\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "d:\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\data_ingestion.py", line 34, in download_file
+    raise e
+  File "d:\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\components\data_ingestion.py", line 29, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\usman\Anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(501705019 bytes read, 1124524000 more expected)', IncompleteRead(501705019 bytes read, 1124524000 more expected))
+[2024-08-06 23:59:06,220: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-08-06 23:59:06,220: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-06 23:59:06,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-06 23:59:06,235: INFO: common: created directory at: artifacts]
+[2024-08-06 23:59:06,235: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-06 23:59:06,235: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/152krLDg50UKntRI8CQ77sta9o_F8UnBq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-07 00:07:56,416: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/152krLDg50UKntRI8CQ77sta9o_F8UnBq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-07 00:08:29,979: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
