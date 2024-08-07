@@ -1,1 +1,8 @@
-key: val
+AUGMENTATION: True
+IMAGE_SIZE: [256, 256, 3]  # Updated size
+BATCH_SIZE: 32  # Adjusted for hardware capability
+INCLUDE_TOP: False
+EPOCHS: 100  # Use EarlyStopping to find optimal epochs
+CLASSES: 4
+WEIGHTS: imagenet
+LEARNING_RATE: 0.0001  # Adjusted for fine-tuning
